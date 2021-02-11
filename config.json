@@ -1,0 +1,15 @@
+{
+	"port": 3000,
+	"printers": [
+		{
+			"title": "Printer 1",
+			"data": "data/printer_1.csv",
+			"id": "printer1"
+		},
+		{
+			"title": "Printer 2",
+			"data": false,
+			"id": "printer2"
+		}
+	]
+}
