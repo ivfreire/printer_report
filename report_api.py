@@ -7,23 +7,34 @@
 
 from flask import Flask
 import pandas as pd
-from json import loads
+from json import loads, dumps
 
+config = {}
 app = Flask(__name__)
 
 @app.route('/')
 def index():
-	return 'Printer Report API Utility'
+	return 'CCIFUSP<br>Printer Report API Utility'
 
-def main():
+
+@app.route('/printers')
+def printer_list():
+	'''
+		Retorna JSON string com listagem das impressoras e localizaão dos arquivos.
+	'''
+	return dumps(config['printers'])
+
+@app.route('/printer/<printer>')
+def printer(printer):
+	'''
+		Retorna dados da impressora requisitada na URL
+	'''
+	return f'Printer selected: {printer}'
+
+if __name__ == '__main__':
 	try:
 		with open('config.json', 'r') as config_file:
 			config = loads(config_file.read())
 			app.run(port=config['port'], debug=True)
 	except Exception as e:
 		print(f'Erro ao ler arquivo de configuração: {e}')
-		return
-	return
-
-if __name__ == '__main__':
-	main()
