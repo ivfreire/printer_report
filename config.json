@@ -5,6 +5,11 @@
 			"title": "Printer 1",
 			"id": "p1",
 			"data": "data/printer_1.csv"
+		},
+		{
+			"title": "Printer 2",
+			"id": "p2",
+			"data": ""
 		}
 	]
 }

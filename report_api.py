@@ -5,7 +5,7 @@
 	API para consumir dados de trabalhos de impressões e cópias em arquivos CSV.
 '''
 
-from flask import Flask
+from flask import Flask, render_template
 import pandas as pd
 from json import loads, dumps
 
@@ -14,7 +14,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-	return 'CCIFUSP<br>Printer Report API Utility'
+	return render_template('index.html')
 
 
 @app.route('/printers')
