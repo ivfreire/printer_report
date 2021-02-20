@@ -1,5 +1,7 @@
 # Relatórios de Impressão
 
+<img src="http://portal.if.usp.br/ccifusp/sites/portal.if.usp.br.ccifusp/files/simbolo%20para%20site_1.png" width="150px" align="right">
+
 Ferramenta implementada em Python para gerar relatórios sobre trabalhos de impressão e cópia das impressoras do Instituto de Física da USP.
 
 A API implementada com Flask e Pandas carrega e analisa os dados de impressoras a partir de arquivos .CSV, e disponibiliza esses dados para serem consumidos pelas URIs específicas.
