@@ -2,21 +2,17 @@
 
 <img src="http://portal.if.usp.br/ccifusp/sites/portal.if.usp.br.ccifusp/files/simbolo%20para%20site_1.png" width="150px" align="right">
 
-Ferramenta implementada em Python para gerar relatórios sobre trabalhos de impressão e cópia das impressoras do Instituto de Física da USP.
+Ferramenta para gerar relatórios sobre trabalhos de impressão e cópias das impressoras do Instituto de Física da USP.
 
-A API implementada com Flask e Pandas carrega e analisa os dados de impressoras a partir de arquivos .CSV, e disponibiliza esses dados para serem consumidos pelas URIs específicas.
+Esta ferramenta está sendo desenvolvida em PHP (back-end) e HTML5, CSS3 e JavaScript (front-end) e pode ser hosteada em qualquer serviço de webhosting com suporte para PHP.
 
-O Front-End acessa os dados das impressoras e os apresenta em uma aplicação Web, consumindo os dados utilizando HTTP requests e utiliza bibliotecas JavaScript para gerar gráficos e interface.
+## Uso
 
-## Métodos HTTP
+As configurações e dados da ferramenta estão armazenados em arquivos JSON dentro do diretório `data`.
 
-Assim que a API estiver online e carregada, existem URIs que retornam dados sobre as impressoras cadastradas no sistema.
+`printers.json`
 
-### Lista de dispositivos
-
-`GET /printers`
-
-Retorna lista de impressoras registradas e dados como nome, local, descrição etc.
+Contém informações sobre as impressoras listadas na ferramenta como nome, localização etc.
 
 ```json
 [
@@ -24,35 +20,17 @@ Retorna lista de impressoras registradas e dados como nome, local, descrição e
     "name": "Nome amigável para humanos.",
     "local": "Localização física (prédio, andar, departamento etc).",
     "description": "Descrição e notas adicionais.",
-    "status": "Estado atual do dispositivo",
     "id": "Identificação interna da API."
   }
 ]
 ```
 
-### Dados de dispositivo
-
-`GET /printer/<id>`
-
-Retorna dados adicionais sobre o dispositivo específicado pela `id`.
-
-```json
-{
-  "name": "Nome amigável para humanos.",
-  "local": "Localização física (prédio, andar, departamento etc).",
-  "desc": "Descrição e notas adicionais.",
-  "status": "Estado atual do dispositivo",
-  "internal_data": "Dados sobre trabalhos de impressão e cópia."
-}
-```
-
 ## Implementação
 
-- Python;
-- Flask;
-- Pandas;
-- JavaScript;
-- jQuery.
+- PHP
+- HTML5
+- CSS3
+- JavaScript
 
 ## Desenvolvimento
 
