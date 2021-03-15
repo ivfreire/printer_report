@@ -1,0 +1,20 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+div.wrapper {
+	width: 70%;
+	padding: 0 15%;
+}
+
+body { background-color: #E6E7E8; }
+
+nav.navigation {
+	display: flex;
+	flex-flow: row;
+	width: 100%;
+	padding: 12px 0;
+	background-color: #0F6688;
+	color: white;
+}
