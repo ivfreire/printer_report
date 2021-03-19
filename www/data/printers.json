@@ -4,13 +4,15 @@
 			"name": "Impressora 1",
 			"local": "Prédio A andar B",
 			"description": "Impressora multifuncional",
-			"data": "data/printer_1.csv"
+			"data": "data/printer_1.csv",
+			"id": "printer_1"
 		},
 		{
 			"name": "Impressora 2",
 			"local": "Prédio C andar D",
 			"description": "Impressora multifuncional",
-			"data": "data/printer_1.csv"
+			"data": "data/printer_1.csv",
+			"id": "printer_2"
 		}
 	]
 }
