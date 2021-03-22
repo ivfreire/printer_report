@@ -1,0 +1,28 @@
+
+ul#printers {
+	display: flex;
+	flex-flow: column;
+	list-style-type: none;
+}
+
+ul#printers a { text-decoration: none; }
+
+ul#printers li {
+	display: flex;
+	justify-content: space-between;
+	padding: 10px 20px;
+	border-radius: 5px;
+	transition: all 0.25s;
+}
+
+ul#printers a li:hover {
+	background-color: #D1D2D4;
+}
+
+ul#printers li.title { font-weight: bold; }
+
+ul#printers li > div {
+	display: flex;
+	max-width: 30%;
+	overflow: hidden;
+}

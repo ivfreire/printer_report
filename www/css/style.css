@@ -3,6 +3,8 @@
 	padding: 0;
 }
 
+span { color: #231F20; }
+
 div.wrapper {
 	width: 70%;
 	padding: 0 15%;
@@ -17,4 +19,8 @@ nav.navigation {
 	padding: 12px 0;
 	background-color: #0F6688;
 	color: white;
+}
+
+div.stack {
+	padding: 60px 0;
 }
