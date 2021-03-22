@@ -8,7 +8,6 @@
 
 	$printers = json_decode(file_get_contents('data/printers.json'), true);
 	$printers = $printers['printers'];
-
 	$printer;
 
 	foreach ($printers as $_printer) {
