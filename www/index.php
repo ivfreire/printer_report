@@ -37,6 +37,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>CCIFUSP - Relatórios de Impressão</title>
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/index.css">
 </head>
 <body>
 	<nav role="navigation" class="navigation">
@@ -49,22 +50,39 @@
 
 			<div class="wrapper">
 				<div class="panel">
-					<div class="left">
-						<h2>Relatórios de Impressão</h2>
-						<p>Relatório sobre os trabalhos de impressão e cópias das impressoras do Insituto de Física da USP. Por favor, efeture login para acessar o dashboard.</p>
-					</div>
-					<div class="right">
-						<div class="login">
-							<form method="POST" action="index.php">
-								<input type="text" name="username" placeholder="Usuário">
-								<input type="password" name="password" placeholder="Senha">
-								<button>Entrar</button>
-							</form>
+					<div class="content">
+						<div class="left">
+							<div class="logo">
+								<img class="logo" src="images/ifusp.png" alt="logo do ifusp">
+							</div>
+							<div class="text">
+								<h2>Relatórios de Impressão</h2>
+								<p>Ferramenta web para visualizar trabalhos de impressão e cópias das impressoras e scanners do Instituto de Física da USP.</p>
+							</div>
+						</div>
+						<div class="right">
+							<div class="login box">
+								<form method="POST" action="index.php">
+									<h1>Login</h1><br>
+									<p>Utilize seu usuário e senha para fazer acessar o painel</p><br>
+									<input type="text" name="username" placeholder="Usuário">
+									<input type="password" name="password" placeholder="Senha">
+									<button>Entrar</button><br><br>
+									<p>Caso tenha esquecido seu usuário ou senha entre em contato com o CCIFUSP.</p>
+								</form>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 
+		</div>
+	</div>
+	<div class="bottom-bar">
+		<div class="wrapper">
+			<div class="info">
+				<p>Desenvolvido pelo Centro de Computação do IFUSP<br>São Paulo - 2021</p>
+			</div>
 		</div>
 	</div>
 </body>
