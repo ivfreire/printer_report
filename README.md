@@ -6,6 +6,11 @@ Ferramenta para gerar relatórios sobre trabalhos de impressão e cópias das im
 
 Esta ferramenta está sendo desenvolvida em PHP (back-end) e HTML5, CSS3 e JavaScript (front-end) e pode ser hosteada em qualquer serviço de webhosting com suporte para PHP.
 
+## Screenshots
+
+Página de login
+<img src="https://github.com/ivfreire/printer_report/blob/development/images/login_page.png" width="100%">
+
 ## Uso
 
 As configurações e dados da ferramenta estão armazenados em arquivos JSON dentro do diretório `data`.
@@ -20,6 +25,7 @@ Contém informações sobre as impressoras listadas na ferramenta como nome, loc
     "name": "Nome amigável para humanos.",
     "local": "Localização física (prédio, andar, departamento etc).",
     "description": "Descrição e notas adicionais.",
+    "data": "Localização do arquivo CSV com dados dos trabalhos de impressões."
     "id": "Identificação interna da API."
   }
 ]
