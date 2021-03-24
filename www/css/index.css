@@ -1,0 +1,12 @@
+div.panel div.content { flex-flow: row wrap; }
+
+div.panel div.content > div { width: 45%; }
+
+div.panel div.logo { padding: 60px 0; }
+div.panel div.logo img { width: 100%; }
+
+div.login input {
+	width: 96%;
+	padding: 2%;
+	margin-bottom: 2%;
+}
