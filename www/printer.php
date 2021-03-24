@@ -41,5 +41,6 @@
 	<div class="stack">
 		
 	</div>
+	<script src="js/printer.js"></script>
 </body>
 </html>

@@ -22,13 +22,10 @@
 
 	$handle = fopen('../'.$printer['data'], 'r');
 
-	$count = 0;
-
 	while(($row = fgetcsv($handle, 0, ",")) !== FALSE) {
-		if (strcmp("Print Job", mb_convert_encoding($row[2] , "UTF-8", "UTF-16")) == 0) $count += 1;
+		$row = mb_convert_encoding($row, "UTF-8", "UTF-16");
+		if (strcmp("Print Job", $row[2]) == 0) $count += 1;
 	}
-
-	echo $count . " print jobs";
 
 	fclose($handle);
 ?>
