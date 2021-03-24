@@ -25,9 +25,7 @@
 	$data = array();
 	$data["users"] = array();
 	$data["total"] = 0;
-	$data["print_jobs"] = 0;
-	$data["copy_jobs"] = 0;
-	$data["scan_jobs"] = 0;
+	$data["jobs"] = array(0, 0, 0);	// Print, Copy, Scan
 
 	while(($row = fgetcsv($handle, 0, ",")) !== FALSE) {
 		$row = mb_convert_encoding($row, "UTF-8", "UTF-16");
@@ -38,8 +36,7 @@
 			$data["users"][$row[3]]["mono"] = 0;
 			$data["users"][$row[3]]["color"] = 0;
 			$data["users"][$row[3]]["duplex"] = 0;
-			$data["users"][$row[3]]["print_jobs"] = 0;
-			$data["users"][$row[3]]["copy_jobs"] = 0;
+			$data["users"][$row[3]]["jobs"] = array(0, 0, 0);	// Print, Copy, Scan
 		}
 
 		if (strcmp($row[2], "Print Job") == 0 || strcmp($row[2], "Copy Job") == 0) {
@@ -50,17 +47,18 @@
 			if (strcmp($row[18], "Color") == 0) $data["users"][$row[3]]["color"] += (int)$row[15] * (int)$row[16];
 			if (strcmp($row[24], "On") == 0) $data["users"][$row[3]]["duplex"] += (int)$row[15] * (int)$row[16];
 			if (strcmp($row[2], "Print Job") == 0) { 
-				$data["print_jobs"] += 1;
-				$data["users"][$row[3]]["print_jobs"] += 1;
+				$data["jobs"][0] += 1;
+				$data["users"][$row[3]]["jobs"][0] += 1;
 			}
 			if (strcmp($row[2], "Copy Job") == 0) {
-				$data["copy_jobs"] += 1;
-				$data["users"][$row[3]]["print_jobs"] += 1;
+				$data["jobs"][1] += 1;
+				$data["users"][$row[3]]["jobs"][1] += 1;
 			}
 		}
+
 		if (strcmp($row[2], "Scan Job") == 0) {
-			$data["scan_jobs"] += 1;
-			$data["users"][$row[3]]["scan_jobs"] += 1;
+			$data["jobs"][2] += 1;
+			$data["users"][$row[3]]["jobs"][2] += 1;
 		}
 	}
 
