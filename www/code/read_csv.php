@@ -26,9 +26,13 @@
 	$data["users"] = array();
 	$data["total"] = 0;
 	$data["jobs"] = array(0, 0, 0);	// Print, Copy, Scan
+	$data["timeline"] = array();	// Print, Copy, Scan
 
 	while(($row = fgetcsv($handle, 0, ",")) !== FALSE) {
 		$row = mb_convert_encoding($row, "UTF-8", "UTF-16");
+		$date = explode(" ", $row[5])[0];
+
+		if (!isset($data["timeline"][$date])) $data["timeline"][$date] = array(0, 0, 0);
 
 		if (!isset($data["users"][$row[3]])) {
 			$data["users"][$row[3]] = array();
@@ -49,16 +53,19 @@
 			if (strcmp($row[2], "Print Job") == 0) { 
 				$data["jobs"][0] += 1;
 				$data["users"][$row[3]]["jobs"][0] += 1;
+				$data["timeline"][$date][0] += (int)$row[15] * (int)$row[16];
 			}
 			if (strcmp($row[2], "Copy Job") == 0) {
 				$data["jobs"][1] += 1;
 				$data["users"][$row[3]]["jobs"][1] += 1;
+				$data["timeline"][$date][1] += (int)$row[15] * (int)$row[16];
 			}
 		}
 
 		if (strcmp($row[2], "Scan Job") == 0) {
 			$data["jobs"][2] += 1;
 			$data["users"][$row[3]]["jobs"][2] += 1;
+			$data["timeline"][$date][2] += (int)$row[15] * (int)$row[16];
 		}
 	}
 
