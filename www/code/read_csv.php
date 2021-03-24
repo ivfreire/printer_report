@@ -24,8 +24,10 @@
 
 	while(($row = fgetcsv($handle, 0, ",")) !== FALSE) {
 		$row = mb_convert_encoding($row, "UTF-8", "UTF-16");
-		if (strcmp("Print Job", $row[2]) == 0) $count += 1;
+		// Código aqui
 	}
+
+	echo $printer['name'];
 
 	fclose($handle);
 ?>
