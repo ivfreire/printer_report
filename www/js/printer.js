@@ -1,7 +1,7 @@
 // Carrega dados da impressora
 const loadPrinterData = function (printer, callback) {
 	$.get(`code/read_csv.php?p=${printer}`, (data) => {
-		callback(data);
+		callback(JSON.parse(data));
 	});
 }
 
