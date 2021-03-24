@@ -25,7 +25,7 @@ Contém informações sobre as impressoras listadas na ferramenta como nome, loc
     "name": "Nome amigável para humanos.",
     "local": "Localização física (prédio, andar, departamento etc).",
     "description": "Descrição e notas adicionais.",
-    "data": "Localização do arquivo CSV com dados dos trabalhos de impressões."
+    "data": "Localização do arquivo CSV com dados dos trabalhos de impressões.",
     "id": "Identificação interna da API."
   }
 ]
