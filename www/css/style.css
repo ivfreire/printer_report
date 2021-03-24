@@ -1,9 +1,23 @@
+@font-face {
+	font-family: Eau;
+	font-weight: normal;
+	src: url('../assets/fonts/eau_sans_book.otf');
+}
+
+@font-face {
+	font-family: Eau;
+	font-weight: bold;
+	src: url('../assets/fonts/eau_sans_bold.otf');
+}
+
 * {
 	margin: 0;
 	padding: 0;
+	font-family: Eau;
 }
 
 h1, h2, h3, h4, h5, h6 { color: #0F6688; }
+p { line-height: 24px; }
 span { color: #231F20; }
 
 div.wrapper {
