@@ -63,18 +63,26 @@ nav.navigation {
 
 nav.navigation h3 { color: #FFFFFF; }
 
-div.stack {
-	padding: 60px 0;
-}
+div.stack { padding: 60px 0; }
 
 div.bottom-bar {
-	position: absolute;
 	padding: 16px 0;
 	width: 100%;
 	bottom: 0;
 	color: #6D6E71;
 }
 
-div.bottom-bar div.info {
-	text-align: center;
+div.bottom-bar div.info { text-align: center; }
+
+@media screen and (max-width: 1200px) {
+	div.wrapper {
+		width: 96%;
+		padding: 0 2%;
+	}
+}
+
+@media screen and (max-width: 624px) {
+	div.stack {
+		padding: 0;
+	}
 }
