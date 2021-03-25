@@ -16,5 +16,12 @@ window.onload = function () {
 
 	loadPrinterData(params['p'], (data) => {
 		console.log(data);
+
+		$('div.info#general-info div.item#total_sheets div.content h2').html(data['totals'][0] + data['totals'][1]);
+		$('div.info#general-info div.item#total_prints div.content h2').html(data['totals'][0]);
+		$('div.info#general-info div.item#total_copies div.content h2').html(data['totals'][1]);
+		$('div.info#general-info div.item#total_scans div.content h2').html(data['totals'][2]);
+
+		$('body').show();
 	});
 }

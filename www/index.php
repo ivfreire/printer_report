@@ -77,7 +77,7 @@
 
 		</div>
 	</div>
-	<div class="bottom-bar">
+	<div class="footer">
 		<div class="wrapper">
 			<div class="info">
 				<p>Desenvolvido pelo CCIFUSP<br>São Paulo - 2021</p>

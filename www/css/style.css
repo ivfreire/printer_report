@@ -16,9 +16,23 @@
 	font-family: Eau;
 }
 
+body { background-color: #E6E7E8; }
 h1, h2, h3, h4, h5, h6 { color: #0F6688; }
 p { line-height: 24px; }
 span { color: #231F20; }
+button {
+	padding: 16px 24px;
+	background-color: #17739A;
+	border: hidden;
+	border-radius: 5px;
+	color: #FFFFFF;
+	font-weight: bold;
+	transition: all 0.25s;
+	cursor: pointer;
+}
+button:hover { background-color: #228FBD; }
+
+div.stack div.element { padding: 60px 0; }
 
 div.wrapper {
 	width: 70%;
@@ -29,12 +43,8 @@ div.panel {
 	display: flex;
 	flex-direction: column;
 }
-
-div.panel div.title {
-	width: 100%;
-}
-
-div.panel div.content {
+div.panel > div.title { width: 100%; }
+div.panel > div.content {
 	width: 100%;
 	display: flex;
 	flex-direction: column;
@@ -49,23 +59,6 @@ div.box {
 	color: #4D4D4F;
 }
 
-button {
-	padding: 16px 24px;
-	background-color: #17739A;
-	border: hidden;
-	border-radius: 5px;
-	color: #FFFFFF;
-	font-weight: bold;
-	transition: all 0.25s;
-	cursor: pointer;
-}
-
-button:hover {
-	background-color: #228FBD;
-}
-
-body { background-color: #E6E7E8; }
-
 nav.navigation {
 	display: flex;
 	flex-flow: row;
@@ -77,16 +70,46 @@ nav.navigation {
 
 nav.navigation h3 { color: #FFFFFF; }
 
-div.stack { padding: 60px 0; }
-
-div.bottom-bar {
-	padding: 16px 0;
+div.footer {
 	width: 100%;
+	padding: 16px 0;
 	bottom: 0;
 	color: #6D6E71;
 }
 
-div.bottom-bar div.info { text-align: center; }
+div.footer div.info { text-align: center; }
+
+
+div.info {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+}
+div.info span { color: #4D4D4F; }
+div.info div.item {
+	background-color: #FFFFFF;
+	padding: 2%;
+	border-radius: 5px;
+}
+div.info div.item div.title { font-weight: bold; }
+div.info div.item div.content {
+	padding: 20px 0;
+	text-align: center;
+}
+div.info div.item div.content h2 { font-size: 48px; }
+div.info div.item div.bottom { text-align: right; }
+
+div.plots {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+}
+div.plots div.plot {
+	background-color: #FFFFFF;
+	padding: 2%;
+	border-radius: 5px;
+}
+div.plots div.plot div.title { font-weight: bold; }
 
 @media screen and (max-width: 1200px) {
 	div.wrapper {
@@ -96,7 +119,7 @@ div.bottom-bar div.info { text-align: center; }
 }
 
 @media screen and (max-width: 624px) {
-	div.stack {
-		padding: 0;
+	div.stack div.element {
+		padding: 30px 0;
 	}
 }

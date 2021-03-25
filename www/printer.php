@@ -35,13 +35,71 @@
 <body>
 	<nav role="navigation" class="navigation">
 		<div class="wrapper">
-			<h3>CCIFUSP - <span class="name"><?php echo $printer['name']; ?></span></h3>
+			<h3>CCIFUSP</h3>
 		</div>
 	</nav>
 	<div class="stack">
-		
+		<div class="element">
+			<div class="wrapper">
+				<div class="panel">
+					<div class="title">
+						<h1>Dashboard</h1>
+					</div>
+					<div class="content">
+						<h3><?php echo $printer['name']; ?></h3>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="element" style="padding-top: 0;">
+			<div class="wrapper">
+				<div class="panel">
+					<div class="title">
+						<h3>Total</h3><br>
+					</div>
+					<div class="content">
+						<div class="info" id="general-info">
+							<div class="item" id="total_sheets">
+								<div class="title"><span>FOLHAS UTILIZADAS</span></div>
+								<div class="content"><h2>0</h2></div>
+								<div class="bottom"><span>FOLHAS</span></div>
+							</div>
+							<div class="item" id="total_prints">
+								<div class="title"><span>IMPRESSÕES</span></div>
+								<div class="content"><h2>0</h2></div>
+								<div class="bottom"><span>PÁGINAS</span></div>
+							</div>
+							<div class="item" id="total_copies">
+								<div class="title"><span>CÓPIAS</span></div>
+								<div class="content"><h2>0</h2></div>
+								<div class="bottom"><span>PÁGINAS</span></div>
+							</div>
+							<div class="item" id="total_scans">
+								<div class="title"><span><i>SCANS</i></span></div>
+								<div class="content"><h2>0</h2></div>
+								<div class="bottom"><span>PÁGINAS</span></div>
+							</div>
+						</div>
+						<div class="plots" id="general-info">
+							<div class="plot" id="users">
+								<div class="title"><span>USUÁRIOS</span></div>
+								<div class="content">
+
+								</div>
+							</div>
+							<div class="plot" id="historical">
+								<div class="title"><span>HISTÓRICO</span></div>
+								<div class="content">
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="js/jquery.js"></script>
 	<script src="js/printer.js"></script>
 </body>
 </html>
