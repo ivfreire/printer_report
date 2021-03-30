@@ -81,16 +81,24 @@
 							</div>
 						</div>
 						<div class="plots" id="general-info">
-							<div class="plot" id="users">
-								<div class="title"><span>USUÁRIOS</span></div>
+							<div class="plot">
+								<div class="title"><span>FOLHAS IMPRESSAS POR USUÁRIO</span></div>
 								<div class="content">
-
+									<div class="plot-holder" id="users">
+										<div class="canvas">
+											<canvas>This browser does not support canvas tag.</canvas>
+										</div>
+									</div>
 								</div>
 							</div>
-							<div class="plot" id="historical">
+							<div class="plot">
 								<div class="title"><span>HISTÓRICO</span></div>
 								<div class="content">
-
+									<div class="plot-holder" id="history">
+										<div class="canvas">
+											<canvas>This browser does not support canvas tag.</canvas>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -100,6 +108,7 @@
 		</div>
 	</div>
 	<script src="js/jquery.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
 	<script src="js/printer.js"></script>
 </body>
 </html>
