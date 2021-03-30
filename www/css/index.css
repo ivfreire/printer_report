@@ -6,7 +6,21 @@ div.panel div.logo { padding: 60px 0; }
 div.panel div.logo img { width: 100%; }
 
 div.login input {
-	width: 96%;
-	padding: 2%;
+	border: 1px solid #E6E7E8;
+	border-radius: 5px;
+	width: 94%;
+	padding: 3%;
 	margin-bottom: 2%;
+}
+
+@media screen and (max-width: 624px) {
+	div.panel div.content { flex-direction: column; }	
+	div.panel div.content > div { width: 100%; }
+	div.panel div.logo {
+		width: 80%;
+		padding: 10%;
+	}
+
+	div.panel div.content > div { margin-bottom: 10%; }
+	div.login button { width: 100%; }
 }

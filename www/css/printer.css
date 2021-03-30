@@ -1,4 +1,14 @@
+body { display: none; }
+
 nav.navigation span.name {
 	color: #FFFFFF;
 	font-weight: normal;
 }
+
+div.info#general-info { padding-bottom: 1%; }
+div.info#general-info div.item {
+	width: 20.25%;
+	padding: 2%;
+}
+
+div.plots#general-info div.plot { width: 45.5%; }

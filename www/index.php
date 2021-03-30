@@ -47,7 +47,6 @@
 	</nav>
 	<div class="stack">
 		<div class="element">
-
 			<div class="wrapper">
 				<div class="panel">
 					<div class="content">
@@ -64,7 +63,7 @@
 							<div class="login box">
 								<form method="POST" action="index.php">
 									<h1>Login</h1><br>
-									<p>Utilize seu usuário e senha para fazer acessar o painel</p><br>
+									<p>Utilize seu usuário e senha para acessar o painel</p><br>
 									<input type="text" name="username" placeholder="Usuário">
 									<input type="password" name="password" placeholder="Senha">
 									<button>Entrar</button><br><br>
@@ -78,10 +77,10 @@
 
 		</div>
 	</div>
-	<div class="bottom-bar">
+	<div class="footer">
 		<div class="wrapper">
 			<div class="info">
-				<p>Desenvolvido pelo Centro de Computação do IFUSP<br>São Paulo - 2021</p>
+				<p>Desenvolvido pelo CCIFUSP<br>São Paulo - 2021</p>
 			</div>
 		</div>
 	</div>
